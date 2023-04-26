@@ -1,0 +1,38 @@
+.authorPhoto {
+    width: 250px;
+    height: 250px;
+    margin: auto;
+    border-radius: 50%;
+    border: 5px solid;
+    border-image: linear-gradient(to bottom, #E70FAA, #00C0FD) 1;
+    animation: ani1 infinite ease;
+    transition: 1s;
+    animation-duration: 3s;
+}
+
+.authorPhoto img {
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes ani1 {
+    0% {
+        border-image: linear-gradient(to bottom, #E70FAA, #00C0FD) 1;
+    }
+
+    25% {
+        border-image: linear-gradient(to left, #00C0FD, #E70FAA) 1;
+    }
+
+    50% {
+        border-image: linear-gradient(to top, #E70FAA, #00C0FD) 1;
+    }
+
+    75% {
+        border-image: linear-gradient(to bottom, #00C0FD, #E70FAA) 1;
+    }
+
+    100% {
+        border-image: linear-gradient(to bottom, #E70FAA, #00C0FD) 1;
+    }
+}
