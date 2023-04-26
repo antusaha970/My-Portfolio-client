@@ -6,3 +6,9 @@
     color: #A7A7A7;
     padding-right: 25px;
 }
+
+@media screen and (max-width: 768px) {
+    .nav-link {
+        color: #000;
+    }
+}
