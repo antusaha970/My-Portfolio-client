@@ -42,7 +42,7 @@ const TechStack = () => {
       <TechStackSubTitle variant="p" component="p">
         I&apos;ve gained experience working with these technologies recently
       </TechStackSubTitle>
-      <Stack direction="row" flexWrap="wrap" justifyContent="center">
+      <Stack direction="row" flexWrap="wrap" justifyContent="center" py={3}>
         {techStackData.map((tech) => (
           <Box
             key={tech.name}
@@ -52,7 +52,15 @@ const TechStack = () => {
               height: { sm: "150px", xs: "100px" },
             }}
           >
-            <img src={tech.img} alt={tech.name} className="tech-img" />
+            <img
+              src={tech.img}
+              alt={tech.name}
+              className={
+                tech.name === "react"
+                  ? `tech-img react-logo-animation`
+                  : `tech-img`
+              }
+            />
           </Box>
         ))}
       </Stack>
