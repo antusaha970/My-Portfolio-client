@@ -8,6 +8,46 @@ const NameHighlight = styled("span")`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  animation: ani1 infinite ease;
+  transition: 1s;
+  animation-duration: 2s;
+
+  @keyframes ani1 {
+    0% {
+      background: linear-gradient(90deg, #13b0f5 -2.06%, #e70faa 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    25% {
+      background: linear-gradient(180deg, #e70faa -2.06%, #13b0f5 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    50% {
+      background: linear-gradient(280deg, #13b0f5 -2.06%, #e70faa 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    75% {
+      background: linear-gradient(360deg, #13b0f5 -2.06%, #e70faa 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    100% {
+      background: linear-gradient(90deg, #13b0f5 -2.06%, #e70faa 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  }
 `;
 
 const Header = () => {

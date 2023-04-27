@@ -50,11 +50,8 @@ const NavBar = () => {
             <Link to="" className="nav-link">
               Home
             </Link>
-            <Link to="" className="nav-link">
+            <Link to="/about" className="nav-link">
               About
-            </Link>
-            <Link to="" className="nav-link">
-              Tech Stack
             </Link>
             <Link to="" className="nav-link">
               Projects
@@ -111,11 +108,8 @@ const NavBar = () => {
               <Link to="" className="nav-link">
                 Home
               </Link>
-              <Link to="" className="nav-link">
+              <Link to="/about" className="nav-link">
                 About
-              </Link>
-              <Link to="" className="nav-link">
-                Tech Stack
               </Link>
               <Link to="" className="nav-link">
                 Projects

@@ -23,7 +23,6 @@ const TechStackSubTitle = styled(Typography)`
 `;
 
 const TechStack = () => {
-  console.log(techStackData);
   return (
     <Box
       sx={{
