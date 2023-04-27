@@ -1,12 +1,11 @@
 import styled from "@emotion/styled";
 import { Box, Typography } from "@mui/material";
-
+import "./TechStack.css";
 const TechStackTitle = styled(Typography)`
   font-family: "Poppins";
   font-style: normal;
   font-weight: 700;
   font-size: 48px;
-  line-height: 26px;
   text-align: center;
   color: #cccccc;
 `;
@@ -29,7 +28,13 @@ const TechStack = () => {
         minHeight: "500px",
       }}
     >
-      <TechStackTitle variant="h4" component="h2">
+      <TechStackTitle
+        variant="h4"
+        component="h2"
+        sx={{
+          lineHeight: { md: "36px", xs: "48px" },
+        }}
+      >
         My Tech Stack
       </TechStackTitle>
       <TechStackSubTitle variant="p" component="p">

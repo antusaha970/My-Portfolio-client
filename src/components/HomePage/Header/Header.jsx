@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import { Box, Stack, Typography } from "@mui/material";
-import antu from "../../../assets/antu.jpeg";
+import { HeartWithArrow, SmilingFaceWithSunglasses } from "fluent-emoji";
 import "./Header.css";
 
 const NameHighlight = styled("span")`
@@ -36,14 +36,13 @@ const Header = () => {
               width: { md: "75%", xs: "100%" },
             }}
           >
-            Hi 👋, My name is <NameHighlight>Antu Saha</NameHighlight> . An
-            Enthusiastic Web Developer
+            Hi <HeartWithArrow className="emoji-smile" />, My name is{" "}
+            <NameHighlight>Antu Saha</NameHighlight> . An Enthusiastic Web
+            Developer
           </Typography>
         </Box>
         <Box flex={1} mb={{ xs: 1 }}>
-          <div className="authorPhoto">
-            <img src={antu} alt="author" />
-          </div>
+          <SmilingFaceWithSunglasses className="emoji-header" />
         </Box>
       </Stack>
     </Box>
