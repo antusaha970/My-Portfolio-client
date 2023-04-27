@@ -3,3 +3,10 @@
     left: 0;
     top: 80vh;
 }
+
+.tech-img {
+    width: 80px;
+    height: 80px;
+    display: block;
+    margin: auto;
+}

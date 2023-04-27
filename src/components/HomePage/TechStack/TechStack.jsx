@@ -1,8 +1,7 @@
 import styled from "@emotion/styled";
 import { Box, Stack, Typography } from "@mui/material";
-import techStackData from "../../../data/data";
-
 import "./TechStack.css";
+import techStackData from "../../../data/data";
 const TechStackTitle = styled(Typography)`
   font-family: "Poppins";
   font-style: normal;
@@ -43,7 +42,20 @@ const TechStack = () => {
       <TechStackSubTitle variant="p" component="p">
         I&apos;ve gained experience working with these technologies recently
       </TechStackSubTitle>
-      <Stack direction="row" flexWrap="wrap"></Stack>
+      <Stack direction="row" flexWrap="wrap" justifyContent="center">
+        {techStackData.map((tech) => (
+          <Box
+            key={tech.name}
+            sx={{
+              m: 2,
+              width: { sm: "150px", xs: "100px" },
+              height: { sm: "150px", xs: "100px" },
+            }}
+          >
+            <img src={tech.img} alt={tech.name} className="tech-img" />
+          </Box>
+        ))}
+      </Stack>
     </Box>
   );
 };
