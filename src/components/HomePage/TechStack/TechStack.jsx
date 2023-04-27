@@ -1,5 +1,7 @@
 import styled from "@emotion/styled";
-import { Box, Typography } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
+import techStackData from "../../../data/data";
+
 import "./TechStack.css";
 const TechStackTitle = styled(Typography)`
   font-family: "Poppins";
@@ -22,6 +24,7 @@ const TechStackSubTitle = styled(Typography)`
 `;
 
 const TechStack = () => {
+  console.log(techStackData);
   return (
     <Box
       sx={{
@@ -40,6 +43,7 @@ const TechStack = () => {
       <TechStackSubTitle variant="p" component="p">
         I&apos;ve gained experience working with these technologies recently
       </TechStackSubTitle>
+      <Stack direction="row" flexWrap="wrap"></Stack>
     </Box>
   );
 };
