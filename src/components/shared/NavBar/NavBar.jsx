@@ -10,7 +10,9 @@ import {
 } from "@mui/material";
 import { Link } from "react-router-dom";
 import "./NavBar.css";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { ResumeModalContext } from "../../../Contexts/AllContexts";
+import ViewResumeModal from "../../Modals/ViewResumeModal";
 
 const LogoText = styled(Typography)`
   background: linear-gradient(to right, #ff00cc, #333399);
@@ -23,6 +25,7 @@ const LogoText = styled(Typography)`
 
 const NavBar = () => {
   const [anchorEl, setAnchorEl] = useState(null);
+  const [, setIsOpen] = useContext(ResumeModalContext); //Model context
 
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);
@@ -33,6 +36,7 @@ const NavBar = () => {
   };
   return (
     <Container maxWidth="lg">
+      <ViewResumeModal />
       <Stack
         direction="row"
         sx={{
@@ -50,6 +54,9 @@ const NavBar = () => {
           <Stack direction="row">
             <Link to="" className="nav-link">
               Home
+            </Link>
+            <Link to="" className="nav-link" onClick={() => setIsOpen(true)}>
+              View Resume
             </Link>
             <Link to="/about" className="nav-link">
               About
