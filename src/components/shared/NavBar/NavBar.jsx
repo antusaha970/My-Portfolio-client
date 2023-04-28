@@ -18,6 +18,7 @@ const LogoText = styled(Typography)`
   -webkit-text-fill-color: transparent;
   font-weight: bold;
   font-size: 30px;
+  cursor: none;
 `;
 
 const NavBar = () => {
