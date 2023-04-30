@@ -2,6 +2,9 @@ import styled from "@emotion/styled";
 import { Box, Button, Container, TextField } from "@mui/material";
 import { useForm, Controller } from "react-hook-form";
 import client from "../../../API/API";
+import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { AdminLoginContext } from "../../../Contexts/AllContexts";
 
 const CssTextField = styled(TextField)({
   "& label.Mui-focused": {
@@ -24,6 +27,8 @@ const CssTextField = styled(TextField)({
 });
 
 const AdminLogin = () => {
+  const navigate = useNavigate();
+  const [, setIsAdmin] = useContext(AdminLoginContext);
   const { control, handleSubmit } = useForm({
     defaultValues: {
       email: "",
@@ -34,7 +39,8 @@ const AdminLogin = () => {
     try {
       const response = await client.post("/admin/login", data);
       if (response.data) {
-        alert("welcome");
+        setIsAdmin(true);
+        navigate("/admin/menu");
       } else {
         alert("Wrong password or email");
       }
