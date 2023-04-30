@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import { Route, Routes } from "react-router-dom";
-import { NavBar, Home, Loader } from "./components/Index/Index";
+import { NavBar, Home, Loader, AdminLogin } from "./components/Index/Index";
 import { useEffect, useState } from "react";
 import { ResumeModalContext } from "./Contexts/AllContexts";
 function App() {
@@ -24,6 +24,7 @@ function App() {
           <NavBar />
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/admin" element={<AdminLogin />} />
           </Routes>
         </ResumeModalContext.Provider>
       )}

@@ -36,7 +36,7 @@ const Project = () => {
           <Fire width="48px" height="48px" />
           jects
         </ProjectTitle>
-        <ProjectSubTitle>Things I have built so</ProjectSubTitle>
+        <ProjectSubTitle>Things I have built so far</ProjectSubTitle>
       </Box>
     </Box>
   );
