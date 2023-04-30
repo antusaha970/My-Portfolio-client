@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import Modal from "react-modal";
 import { ResumeModalContext } from "../../Contexts/AllContexts";
 
@@ -16,10 +16,6 @@ const customStyles = {
 const ViewResumeModal = () => {
   let subtitle;
   const [modalIsOpen, setIsOpen] = useContext(ResumeModalContext);
-
-  function openModal() {
-    setIsOpen(true);
-  }
 
   function afterOpenModal() {
     // references are now sync'd and can be accessed.
