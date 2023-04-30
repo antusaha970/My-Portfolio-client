@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import { Box, Button, Container, TextField } from "@mui/material";
 import { useForm, Controller } from "react-hook-form";
+import client from "../../../API/API";
 
 const CssTextField = styled(TextField)({
   "& label.Mui-focused": {
@@ -29,7 +30,15 @@ const AdminLogin = () => {
       password: "",
     },
   });
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = async (data) => {
+    console.log(data);
+    try {
+      const response = await client.post("/adminLogin", data);
+      console.log(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <Box
       sx={{
