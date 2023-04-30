@@ -31,10 +31,13 @@ const AdminLogin = () => {
     },
   });
   const onSubmit = async (data) => {
-    console.log(data);
     try {
-      const response = await client.post("/adminLogin", data);
-      console.log(response.data);
+      const response = await client.post("/admin/login", data);
+      if (response.data) {
+        alert("welcome");
+      } else {
+        alert("Wrong password or email");
+      }
     } catch (error) {
       console.log(error);
     }
@@ -45,7 +48,16 @@ const AdminLogin = () => {
         minHeight: "90vh",
       }}
     >
-      <Container maxWidth="lg">
+      <Container
+        maxWidth="lg"
+        sx={{
+          minWidth: "100%",
+          height: "80vh",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
         <Box component="form" onSubmit={handleSubmit(onSubmit)}>
           <Controller
             name="email"
