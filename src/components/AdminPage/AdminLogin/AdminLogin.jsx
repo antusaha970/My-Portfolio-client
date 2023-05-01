@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AdminLoginContext } from "../../../Contexts/AllContexts";
 
-const CssTextField = styled(TextField)({
+export const CssTextField = styled(TextField)({
   "& label.Mui-focused": {
     color: "#fff",
   },

@@ -7,8 +7,9 @@ import {
   AdminLogin,
   PrivateRoute,
   AdminMenu,
+  AddProject,
 } from "./components/Index/Index";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { ResumeModalContext, AdminLoginContext } from "./Contexts/AllContexts";
 function App() {
   const [isLoading, setIsLoading] = useState(true); // Preloader State
@@ -38,7 +39,19 @@ function App() {
                 path="/admin/menu"
                 element={
                   <PrivateRoute isSignedIn={isAdmin}>
-                    <AdminMenu />
+                    <Suspense>
+                      <AdminMenu />
+                    </Suspense>
+                  </PrivateRoute>
+                }
+              />
+              <Route
+                path="/admin/add_project"
+                element={
+                  <PrivateRoute isSignedIn={isAdmin}>
+                    <Suspense>
+                      <AddProject />
+                    </Suspense>
                   </PrivateRoute>
                 }
               />
