@@ -1,6 +1,9 @@
 import styled from "@emotion/styled";
-import { Box, Typography } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import { Fire } from "fluent-emoji";
+import { useEffect, useState } from "react";
+import client from "../../../API/API";
+import SingleProjectCard from "../SingleProjectCard/SingleProjectCard";
 
 const ProjectTitle = styled(Typography)`
   font-family: "Poppins";
@@ -24,6 +27,19 @@ const ProjectSubTitle = styled(Typography)`
 `;
 
 const Project = () => {
+  const [projectsData, setProjectsData] = useState([]);
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const response = await client.get("/resources/projects");
+        setProjectsData(response.data);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    fetchData();
+  }, []);
+
   return (
     <Box
       sx={{
@@ -37,6 +53,19 @@ const Project = () => {
           jects
         </ProjectTitle>
         <ProjectSubTitle>Things I have built so far</ProjectSubTitle>
+        <Box>
+          <Stack
+            direction={{ md: "row", xs: "column" }}
+            sx={{
+              my: 2,
+            }}
+            alignItems="center"
+          >
+            {projectsData?.map((project) => (
+              <SingleProjectCard key={project._id} project={project} />
+            ))}
+          </Stack>
+        </Box>
       </Box>
     </Box>
   );
