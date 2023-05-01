@@ -4,7 +4,7 @@ import { CssTextField } from "../AdminLogin/AdminLogin";
 import client from "../../../API/API";
 
 const AddProject = () => {
-  const { control, handleSubmit } = useForm({
+  const { control, handleSubmit, reset } = useForm({
     defaultValues: {
       title: "",
       description: "",
@@ -18,7 +18,12 @@ const AddProject = () => {
     try {
       const response = await client.put("/add/project", data);
       console.log(response.data);
+      if (response.data) {
+        alert("Project added successfully");
+        reset();
+      }
     } catch (error) {
+      alert("There was an error");
       console.log(error);
     }
   };
