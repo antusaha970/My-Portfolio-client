@@ -41,35 +41,37 @@ const Project = () => {
   }, []);
 
   return (
-    <Box
-      sx={{
-        minHeight: "600px",
-      }}
-    >
-      <Box>
-        <ProjectTitle>
-          Pr
-          <Fire width="48px" height="48px" />
-          jects
-        </ProjectTitle>
-        <ProjectSubTitle>Things I have built so far</ProjectSubTitle>
+    <section id="projects">
+      <Box
+        sx={{
+          minHeight: "600px",
+        }}
+      >
         <Box>
-          <Stack
-            direction={{ md: "row", xs: "column" }}
-            sx={{
-              my: 2,
-            }}
-            alignItems="center"
-            justifyContent="center"
-            gap={2}
-          >
-            {projectsData?.map((project) => (
-              <SingleProjectCard key={project._id} project={project} />
-            ))}
-          </Stack>
+          <ProjectTitle>
+            Pr
+            <Fire width="48px" height="48px" />
+            jects
+          </ProjectTitle>
+          <ProjectSubTitle>Things I have built so far</ProjectSubTitle>
+          <Box>
+            <Stack
+              direction={{ md: "row", xs: "column" }}
+              sx={{
+                my: 2,
+              }}
+              alignItems="center"
+              justifyContent="center"
+              gap={2}
+            >
+              {projectsData?.map((project) => (
+                <SingleProjectCard key={project._id} project={project} />
+              ))}
+            </Stack>
+          </Box>
         </Box>
       </Box>
-    </Box>
+    </section>
   );
 };
 
