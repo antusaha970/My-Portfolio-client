@@ -50,7 +50,7 @@ const SingleProjectCard = ({ project }) => {
           {title}
         </ProjectTitle>
         <ProjectDescription variant="p" component="p">
-          {description.slice(0, 250)}
+          {description.slice(0, 280)}
         </ProjectDescription>
         <ProjectTechStack variant="p" component="p">
           Tech-Stack :{" "}

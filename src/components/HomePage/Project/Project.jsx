@@ -60,6 +60,8 @@ const Project = () => {
               my: 2,
             }}
             alignItems="center"
+            justifyContent="center"
+            gap={2}
           >
             {projectsData?.map((project) => (
               <SingleProjectCard key={project._id} project={project} />

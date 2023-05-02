@@ -67,12 +67,20 @@ const NavBar = () => {
             <Link to="" className="nav-link">
               Contact
             </Link>
-            <Link to="" className="nav-link">
+            <a
+              href="https://github.com/antusaha970"
+              className="nav-link"
+              target=" "
+            >
               <GitHub />
-            </Link>
-            <Link to="" className="nav-link">
+            </a>
+            <a
+              href="https://www.linkedin.com/in/antusaha970"
+              className="nav-link"
+              target=" "
+            >
               <LinkedIn />
-            </Link>
+            </a>
           </Stack>
         </Box>
         <Box display={{ lg: "none", md: "none", sm: "block", xs: "block" }}>
@@ -132,12 +140,20 @@ const NavBar = () => {
               <Link to="" className="nav-link">
                 Contact
               </Link>
-              <Link to="" className="nav-link">
+              <a
+                href="https://github.com/antusaha970"
+                className="nav-link"
+                target=" "
+              >
                 <GitHub />
-              </Link>
-              <Link to="" className="nav-link">
+              </a>
+              <a
+                href="https://www.linkedin.com/in/antusaha970"
+                className="nav-link"
+                target=" "
+              >
                 <LinkedIn />
-              </Link>
+              </a>
             </Stack>
           </Menu>
         </Box>
