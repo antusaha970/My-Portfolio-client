@@ -116,8 +116,15 @@ const NavBar = () => {
               <Link to="" className="nav-link">
                 Home
               </Link>
-              <Link to="/about" className="nav-link">
-                About
+              <Link
+                to=""
+                className="nav-link"
+                onClick={() => {
+                  setIsOpen(true);
+                  handleClose();
+                }}
+              >
+                View Resume
               </Link>
               <Link to="" className="nav-link">
                 Projects
