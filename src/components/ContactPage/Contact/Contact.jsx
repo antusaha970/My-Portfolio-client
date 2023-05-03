@@ -4,8 +4,23 @@ import { TechStackTitle } from "../../HomePage/TechStack/TechStack";
 import { useForm, Controller } from "react-hook-form";
 import { CssTextField } from "../../AdminPage/AdminLogin/AdminLogin";
 import client from "../../../API/API";
+import { useState } from "react";
+import styled from "@emotion/styled";
+
+const CustomMsgLog = styled(Box)`
+  width: 100%;
+  height: 100px;
+  background: #525659;
+  position: absolute;
+  top: 0;
+  transition: 1s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
 
 const Contact = () => {
+  const [isReceivedMsg, setIsReceivedMsg] = useState(false);
   const {
     control,
     handleSubmit,
@@ -22,18 +37,39 @@ const Contact = () => {
       const response = await client.post("/contact/message", data);
       if (response.data) {
         reset();
+        setIsReceivedMsg(true);
+        setTimeout(() => {
+          setIsReceivedMsg(false);
+        }, 2500);
       }
     } catch (error) {
+      alert("Failed to send message please try again later");
       console.log(error);
     }
   };
+
   return (
     <Container maxWidth="lg">
       <Box
         sx={{
           minHeight: "80vh",
+          position: "relative",
         }}
       >
+        {isReceivedMsg && (
+          <CustomMsgLog>
+            <Typography
+              variant="p"
+              component="p"
+              sx={{
+                color: "#fff",
+                textAlign: "center",
+              }}
+            >
+              Thank You I will Get back to you soon ❤️
+            </Typography>
+          </CustomMsgLog>
+        )}
         <Box>
           <TechStackTitle variant="h2" component="h2" py={1}>
             Get in touch with me
@@ -63,6 +99,9 @@ const Contact = () => {
                   },
                 }}
                 type="text"
+                sx={{
+                  zIndex: 1,
+                }}
               />
             )}
           />
@@ -103,6 +142,9 @@ const Contact = () => {
                   },
                 }}
                 type="text"
+                sx={{
+                  zIndex: 1,
+                }}
               />
             )}
           />
