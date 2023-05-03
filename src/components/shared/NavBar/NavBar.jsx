@@ -10,9 +10,7 @@ import {
 } from "@mui/material";
 import { Link } from "react-router-dom";
 import "./NavBar.css";
-import { useContext, useState } from "react";
-import { ResumeModalContext } from "../../../Contexts/AllContexts";
-import ViewResumeModal from "../../Modals/ViewResumeModal";
+import { useState } from "react";
 
 const LogoText = styled(Typography)`
   background: linear-gradient(to right, #ff00cc, #333399);
@@ -25,7 +23,6 @@ const LogoText = styled(Typography)`
 
 const NavBar = () => {
   const [anchorEl, setAnchorEl] = useState(null);
-  const [, setIsOpen] = useContext(ResumeModalContext); //Model context
 
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);
@@ -36,7 +33,6 @@ const NavBar = () => {
   };
   return (
     <Container maxWidth="lg">
-      <ViewResumeModal />
       <Stack
         direction="row"
         sx={{
@@ -55,12 +51,13 @@ const NavBar = () => {
             <Link to="" className="nav-link">
               Home
             </Link>
-            <Link to="" className="nav-link" onClick={() => setIsOpen(true)}>
+            <a
+              target=" "
+              href="https://docs.google.com/document/d/1i5U07NH-9QJEEI1wqP_4ZpffDDEqSZKDOM4Qpm2sJwM/edit?usp=sharing"
+              className="nav-link"
+            >
               View Resume
-            </Link>
-            <Link to="/about" className="nav-link">
-              About
-            </Link>
+            </a>
             <a href="#projects" className="nav-link">
               Projects
             </a>
@@ -71,6 +68,9 @@ const NavBar = () => {
               href="https://github.com/antusaha970"
               className="nav-link"
               target=" "
+              onClick={() => {
+                handleClose();
+              }}
             >
               <GitHub />
             </a>
@@ -130,16 +130,16 @@ const NavBar = () => {
               >
                 Home
               </Link>
-              <Link
-                to=""
+              <a
+                target=" "
+                href="https://docs.google.com/document/d/1i5U07NH-9QJEEI1wqP_4ZpffDDEqSZKDOM4Qpm2sJwM/edit?usp=sharing"
                 className="nav-link"
                 onClick={() => {
-                  setIsOpen(true);
                   handleClose();
                 }}
               >
                 View Resume
-              </Link>
+              </a>
               <a
                 href="#projects"
                 className="nav-link"
