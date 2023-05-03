@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { Box, Stack, Typography } from "@mui/material";
 import "./TechStack.css";
 import techStackData from "../../../data/data";
-const TechStackTitle = styled(Typography)`
+export const TechStackTitle = styled(Typography)`
   font-family: "Poppins";
   font-style: normal;
   font-weight: 700;

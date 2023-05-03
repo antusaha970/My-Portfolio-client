@@ -8,6 +8,7 @@ import {
   PrivateRoute,
   AdminMenu,
   AddProject,
+  Contact,
 } from "./components/Index/Index";
 import { Suspense, useEffect, useState } from "react";
 import { ResumeModalContext, AdminLoginContext } from "./Contexts/AllContexts";
@@ -34,6 +35,7 @@ function App() {
             <NavBar />
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/contact" element={<Contact />} />
               <Route path="/admin" element={<AdminLogin />} />
               <Route
                 path="/admin/menu"

@@ -64,7 +64,7 @@ const NavBar = () => {
             <a href="#projects" className="nav-link">
               Projects
             </a>
-            <Link to="" className="nav-link">
+            <Link to="/contact" className="nav-link">
               Contact
             </Link>
             <a
@@ -137,7 +137,7 @@ const NavBar = () => {
               <a href="#projects" className="nav-link">
                 Projects
               </a>
-              <Link to="" className="nav-link">
+              <Link to="/contact" className="nav-link">
                 Contact
               </Link>
               <a
