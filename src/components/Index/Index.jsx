@@ -13,5 +13,4 @@ export { default as Loader } from "../Loader/Loader";
 export { default as PrivateRoute } from "../shared/PrivateRoute/PrivateRoute";
 export { default as Footer } from "../shared/Footer/Footer";
 export { default as Contact } from "../ContactPage/Contact/Contact";
-export { default as AfterMessageModal } from "../ContactPage/AfterMessageModal/AfterMessageModal";
 export { AdminLogin, AdminMenu, AddProject };

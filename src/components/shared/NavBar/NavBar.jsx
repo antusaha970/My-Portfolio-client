@@ -121,7 +121,13 @@ const NavBar = () => {
               pl={1}
               color="#000"
             >
-              <Link to="" className="nav-link">
+              <Link
+                to=""
+                className="nav-link"
+                onClick={() => {
+                  handleClose();
+                }}
+              >
                 Home
               </Link>
               <Link
@@ -134,16 +140,31 @@ const NavBar = () => {
               >
                 View Resume
               </Link>
-              <a href="#projects" className="nav-link">
+              <a
+                href="#projects"
+                className="nav-link"
+                onClick={() => {
+                  handleClose();
+                }}
+              >
                 Projects
               </a>
-              <Link to="/contact" className="nav-link">
+              <Link
+                to="/contact"
+                className="nav-link"
+                onClick={() => {
+                  handleClose();
+                }}
+              >
                 Contact
               </Link>
               <a
                 href="https://github.com/antusaha970"
                 className="nav-link"
                 target=" "
+                onClick={() => {
+                  handleClose();
+                }}
               >
                 <GitHub />
               </a>
@@ -151,6 +172,9 @@ const NavBar = () => {
                 href="https://www.linkedin.com/in/antusaha970"
                 className="nav-link"
                 target=" "
+                onClick={() => {
+                  handleClose();
+                }}
               >
                 <LinkedIn />
               </a>
