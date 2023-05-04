@@ -4,6 +4,7 @@ import { Fire } from "fluent-emoji";
 import { useEffect, useState } from "react";
 import client from "../../../API/API";
 import SingleProjectCard from "../SingleProjectCard/SingleProjectCard";
+import { MyLoader } from "../../Index/Index";
 
 const ProjectTitle = styled(Typography)`
   font-family: "Poppins";
@@ -28,10 +29,12 @@ const ProjectSubTitle = styled(Typography)`
 
 const Project = () => {
   const [projectsData, setProjectsData] = useState([]);
+  const [isLoadingContent, setIsLoadingContent] = useState(true);
   useEffect(() => {
     async function fetchData() {
       try {
         const response = await client.get("/resources/projects");
+        setIsLoadingContent(false);
         setProjectsData(response.data);
       } catch (error) {
         console.log(error);
@@ -64,6 +67,7 @@ const Project = () => {
               justifyContent="center"
               gap={2}
             >
+              {isLoadingContent && <MyLoader></MyLoader>}
               {projectsData?.map((project) => (
                 <SingleProjectCard key={project._id} project={project} />
               ))}
