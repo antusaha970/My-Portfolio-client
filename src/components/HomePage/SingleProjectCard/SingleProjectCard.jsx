@@ -1,6 +1,13 @@
 import styled from "@emotion/styled";
 import { GitHub, Link } from "@mui/icons-material";
-import { Box, Card, CardContent, Stack, Typography } from "@mui/material";
+import {
+  Box,
+  Card,
+  CardContent,
+  CardMedia,
+  Stack,
+  Typography,
+} from "@mui/material";
 import PropTypes from "prop-types";
 
 const ProjectTitle = styled(Typography)`
@@ -36,21 +43,24 @@ const ProjectLink = styled("a")`
 `;
 
 const SingleProjectCard = ({ project }) => {
-  const { title, description, techStack, liveLink, githubLink } = project;
+  const { title, description, techStack, liveLink, githubLink, imageLink } =
+    project;
   return (
     <Card
       sx={{
         background: "#363636",
         width: "320px",
-        height: "400px",
+        height: "auto",
+        minHeight: "400px",
       }}
     >
+      <CardMedia component="img" height="194" image={imageLink} alt={title} />
       <CardContent>
         <ProjectTitle variant="h6" component="h6">
           {title}
         </ProjectTitle>
         <ProjectDescription variant="p" component="p">
-          {description.slice(0, 280)}
+          {description}
         </ProjectDescription>
         <ProjectTechStack variant="p" component="p">
           Tech-Stack :{" "}
@@ -98,6 +108,7 @@ SingleProjectCard.propTypes = {
     techStack: PropTypes.string.isRequired,
     liveLink: PropTypes.string.isRequired,
     githubLink: PropTypes.string.isRequired,
+    imageLink: PropTypes.string.isRequired,
   }).isRequired,
 };
 
