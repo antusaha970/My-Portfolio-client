@@ -29,6 +29,10 @@ const AdminMenu = () => {
           <CustomButton color="secondary" variant="contained">
             <Link to="/admin/add_project">Add Project</Link>
           </CustomButton>
+          <br />
+          <CustomButton color="secondary" variant="contained">
+            <Link to="/admin/manage_project">Manage Project</Link>
+          </CustomButton>
         </Stack>
       </Container>
     </Box>

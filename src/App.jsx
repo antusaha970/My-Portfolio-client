@@ -9,6 +9,7 @@ import {
   AdminMenu,
   AddProject,
   Contact,
+  ManageProjects,
 } from "./components/Index/Index";
 import { Suspense, useEffect, useState } from "react";
 import { ResumeModalContext, AdminLoginContext } from "./Contexts/AllContexts";
@@ -53,6 +54,16 @@ function App() {
                   <PrivateRoute isSignedIn={isAdmin}>
                     <Suspense>
                       <AddProject />
+                    </Suspense>
+                  </PrivateRoute>
+                }
+              />
+              <Route
+                path="/admin/manage_project"
+                element={
+                  <PrivateRoute isSignedIn={isAdmin}>
+                    <Suspense>
+                      <ManageProjects />
                     </Suspense>
                   </PrivateRoute>
                 }
