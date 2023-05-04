@@ -26,19 +26,7 @@ const AddProject = () => {
 
     reader.readAsDataURL(file);
   };
-  console.log(image);
-  const onSubmit = async (data) => {
-    // try {
-    //   const response = await client.put("/add/project", data);
-    //   console.log(response.data);
-    //   if (response.data) {
-    //     alert("Project added successfully");
-    //     reset();
-    //   }
-    // } catch (error) {
-    //   alert("There was an error");
-    //   console.log(error);
-    // }
+  const onSubmit = (data) => {
     const imgArr = image.split(",");
     const apiKey = "bccff53654f10f82c9c8a2ba645ab87a";
     const imageBase64 = `${imgArr[1]}`;
@@ -51,15 +39,39 @@ const AddProject = () => {
       body: formData,
     })
       .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
+      .then((imgUpLoadRes) => {
+        const {
+          data: {
+            image: { url },
+          },
+        } = imgUpLoadRes;
         // Do something with the response data
+        if (imgUpLoadRes.success) {
+          projectUploadToDb(data, url);
+        } else {
+          alert("Image upload failed");
+        }
       })
       .catch((error) => {
         console.error(error);
         // Handle the error
       });
   };
+
+  async function projectUploadToDb(data, imageLink) {
+    data = { ...data, imageLink };
+    try {
+      const response = await client.put("/add/project", data);
+      console.log(response.data);
+      if (response.data) {
+        alert("Project added successfully");
+        reset();
+      }
+    } catch (error) {
+      alert("There was an error");
+      console.log(error);
+    }
+  }
 
   return (
     <Box
@@ -207,12 +219,13 @@ const AddProject = () => {
             )}
           />
           <br />
-          <input type="file" onChange={handleFileInputChange} />
+          <label htmlFor="cover">Enter Featured Image</label>
+          <input type="file" onChange={handleFileInputChange} id="cover" />
+          <br />
           <Button variant="contained" type="submit" color="secondary">
             Submit
           </Button>
         </Box>
-        {image && <img src={image} alt="uploaded" />}
       </Container>
     </Box>
   );
