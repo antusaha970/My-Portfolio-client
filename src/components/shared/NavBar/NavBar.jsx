@@ -53,7 +53,7 @@ const NavBar = () => {
             </Link>
             <a
               target=" "
-              href="https://docs.google.com/document/d/1i5U07NH-9QJEEI1wqP_4ZpffDDEqSZKDOM4Qpm2sJwM/edit?usp=sharing"
+              href="https://drive.google.com/file/d/1IF_BpHXRmCMmT9F4laqcfiVTNMZFXA65/view?usp=sharing"
               className="nav-link"
             >
               View Resume
@@ -132,7 +132,7 @@ const NavBar = () => {
               </Link>
               <a
                 target=" "
-                href="https://docs.google.com/document/d/1i5U07NH-9QJEEI1wqP_4ZpffDDEqSZKDOM4Qpm2sJwM/edit?usp=sharing"
+                href="https://drive.google.com/file/d/1IF_BpHXRmCMmT9F4laqcfiVTNMZFXA65/view?usp=sharing"
                 className="nav-link"
                 onClick={() => {
                   handleClose();
