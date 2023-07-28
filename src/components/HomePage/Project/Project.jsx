@@ -62,12 +62,13 @@ const Project = () => {
               direction={{ md: "row", xs: "column" }}
               sx={{
                 my: 2,
+                flexWrap: "wrap",
               }}
-              alignItems="center"
+              alignItems="start"
               justifyContent="center"
               gap={2}
             >
-              {isLoadingContent && <MyLoader></MyLoader>}
+              {isLoadingContent && <MyLoader />}
               {projectsData?.map((project) => (
                 <SingleProjectCard key={project._id} project={project} />
               ))}

@@ -13,6 +13,8 @@ import figma from "../assets/techStack/figma.png";
 import express from "../assets/techStack/express.png";
 import materialUI from "../assets/techStack/materailUI.png";
 import nodejs from "../assets/techStack/node-js.png";
+import nextjs from "../assets/techStack/nextjs.png";
+import mongoose from "../assets/techStack/mongoose.png";
 
 const techStackData = [
   { name: "css", img: css },
@@ -30,6 +32,8 @@ const techStackData = [
   { name: "express", img: express },
   { name: "materialUI", img: materialUI },
   { name: "nodejs", img: nodejs },
+  { name: "nextjs", img: nextjs },
+  { name: "mongoose", img: mongoose },
 ];
 
 export default techStackData;
