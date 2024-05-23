@@ -36,7 +36,7 @@ const TechStack = () => {
           lineHeight: { md: "36px", xs: "48px" },
         }}
       >
-        My Tech Stack
+        My Skills
       </TechStackTitle>
       <TechStackSubTitle variant="p" component="p">
         I&apos;ve gained experience working with these technologies recently
@@ -51,15 +51,7 @@ const TechStack = () => {
               height: { sm: "150px", xs: "100px" },
             }}
           >
-            <img
-              src={tech.img}
-              alt={tech.name}
-              className={
-                tech.name === "react"
-                  ? `tech-img react-logo-animation`
-                  : `tech-img`
-              }
-            />
+            <img src={tech.img} alt={tech.name} className={`tech-img`} />
           </Box>
         ))}
       </Stack>
