@@ -1,7 +1,8 @@
 import styled from "@emotion/styled";
 import { Box, Stack, Typography } from "@mui/material";
-import { HeartWithArrow, SmilingFaceWithSunglasses } from "fluent-emoji";
+import { HeartWithArrow } from "fluent-emoji";
 import "./Header.css";
+import profile from "../../../assets/profile.jpg";
 
 const NameHighlight = styled("span")`
   background: linear-gradient(90deg, #13b0f5 -2.06%, #e70faa 100%);
@@ -81,8 +82,14 @@ const Header = () => {
             Developer
           </Typography>
         </Box>
-        <Box flex={1} mb={{ xs: 1 }}>
-          <SmilingFaceWithSunglasses className="emoji-header" />
+        <Box
+          flex={1}
+          mb={{ xs: 1 }}
+          sx={{
+            textAlign: "center",
+          }}
+        >
+          <img src={profile} alt="Antu Saha picture" className="banner-photo" />
         </Box>
       </Stack>
     </Box>
