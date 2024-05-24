@@ -11,7 +11,9 @@ import materialUI from "../assets/techStack/materailUI.png";
 import django from "../assets/techStack/django.png";
 import cpp from "../assets/techStack/cpp.png";
 import python from "../assets/techStack/python.png";
-
+import p1 from "../assets/pbProfile/p1.png";
+import p3 from "../assets/pbProfile/p3.png";
+import p2 from "../assets/pbProfile/p2.png";
 const techStackData = [
   { name: "css", img: css },
   { name: "html", img: html },
@@ -28,4 +30,23 @@ const techStackData = [
   { name: "django", img: django },
 ];
 
+const problemSolvingProfileData = [
+  {
+    name: "LeetCode",
+    img: p1,
+    profileLink: "https://leetcode.com/u/antusaha970/",
+  },
+  {
+    name: "GeeksForGeeks",
+    img: p3,
+    profileLink: "https://www.geeksforgeeks.org/user/antusaha970/",
+  },
+  {
+    name: "Coding Ninjas",
+    img: p2,
+    profileLink: "https://www.naukri.com/code360/profile/antusaha",
+  },
+];
+
 export default techStackData;
+export { problemSolvingProfileData };

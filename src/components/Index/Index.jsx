@@ -17,4 +17,5 @@ export { default as PrivateRoute } from "../shared/PrivateRoute/PrivateRoute";
 export { default as Footer } from "../shared/Footer/Footer";
 export { default as MyLoader } from "../shared/MyLoader/MyLoader";
 export { default as Contact } from "../ContactPage/Contact/Contact";
+export { default as ProblemSolvingProfile } from "../ProblemSolvingProfile/ProblemSolvingProfile";
 export { AdminLogin, AdminMenu, AddProject, ManageProjects };
