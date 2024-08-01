@@ -14,6 +14,11 @@ import python from "../assets/techStack/python.png";
 import p1 from "../assets/pbProfile/p1.png";
 import p3 from "../assets/pbProfile/p3.png";
 import p2 from "../assets/pbProfile/p2.png";
+import rest_framework from "../assets/techStack/rest.png";
+import stripe from "../assets/techStack/rsz_stripe.png";
+import postman from "../assets/techStack/postman.png";
+import mysql from "../assets/techStack/mysql.png";
+
 const techStackData = [
   { name: "css", img: css },
   { name: "html", img: html },
@@ -28,6 +33,10 @@ const techStackData = [
   { name: "cpp", img: cpp },
   { name: "python", img: python },
   { name: "django", img: django },
+  { name: "django_rest_framework", img: rest_framework },
+  { name: "stripe", img: stripe },
+  { name: "postman", img: postman },
+  { name: "mysql", img: mysql },
 ];
 
 const problemSolvingProfileData = [
