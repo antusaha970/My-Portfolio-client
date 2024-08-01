@@ -56,6 +56,13 @@ const NavBar = () => {
               href="https://drive.google.com/file/d/1pdc4RqmOu_G96RjNRQlsUS3-A0gpNpOt/view?usp=sharing"
               className="nav-link"
             >
+              View CV
+            </a>
+            <a
+              target=" "
+              href="https://drive.google.com/file/d/1ZyB-crK9NaP-Tl3f6ZM24wFCt87KXKrH/view?usp=sharing"
+              className="nav-link"
+            >
               View Resume
             </a>
             <a href="#projects" className="nav-link">
