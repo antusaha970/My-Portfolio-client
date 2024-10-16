@@ -57,5 +57,41 @@ const problemSolvingProfileData = [
   },
 ];
 
+const projectDataStatic = [
+  {
+    description:
+      "The House Rent Site is a web application that allows users to post and find rental advertisements. Users can book house rent and manage all necessary things. ",
+    backendLink: "https://github.com/antusaha970/Home-housing-backend",
+    frontendLink: "https://github.com/antusaha970/Home-Housing",
+    imageLink: "https://i.ibb.co.com/PYL75SQ/Screenshot-2024-10-16-130515.png",
+    liveLink: "https://home-housing.netlify.app/",
+    techStack:
+      "Python, Django, Django REST framework, SQLite3, Stripe, React, Bootstrap, react-hook-form,React Router, Docker",
+    title: "Home-Housing",
+  },
+  {
+    description:
+      "Krist E-commerce is a t-shirt sales platform where users can choose from 1000 designs, place orders via Stripe or cash on delivery, and enjoy features like product filtering and order management. Admins manage products, orders, and accounts with ease.",
+    backendLink: "https://github.com/antusaha970/krist_ecommerce_backend",
+    frontendLink: "https://github.com/antusaha970/krist_ecommerce_frontend",
+    imageLink: "https://i.ibb.co.com/Jc50Ccv/Screenshot-2024-10-16-133207.png",
+    liveLink: "https://krist-ecommerce.netlify.app/",
+    techStack:
+      "Python, Django, Django REST framework, SQLite3, Stripe,Redis, React, Bootstrap, react-hook-form,React Router, Axios, Docker",
+    title: "Krist E-commerce",
+  },
+  {
+    description:
+      "This is a full stack Gym management project with full functionality. There is an admin panel also to manage content. I implemented stripe payment gateway too. For full information visit github. ",
+    backendLink: "https://github.com/antusaha970/power-x-gym",
+    frontendLink: "https://github.com/antusaha970/power-x-gym",
+    imageLink: "https://i.ibb.co/WpxDyXB/35ae65b77bc4.png",
+    liveLink: "https://power-x-gym-feni.netlify.app/",
+    techStack:
+      "React, Material UI, React-Router, Axios,Node, Express,Mongodb,Mongoose",
+    title: "Power-X-Gym",
+  },
+];
+
 export default techStackData;
-export { problemSolvingProfileData };
+export { problemSolvingProfileData, projectDataStatic };

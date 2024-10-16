@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import client from "../../../API/API";
 import SingleProjectCard from "../SingleProjectCard/SingleProjectCard";
 import { MyLoader } from "../../Index/Index";
+import { projectDataStatic } from "../../../data/data";
 
 const ProjectTitle = styled(Typography)`
   font-family: "Poppins";
@@ -28,20 +29,21 @@ const ProjectSubTitle = styled(Typography)`
 `;
 
 const Project = () => {
-  const [projectsData, setProjectsData] = useState([]);
-  const [isLoadingContent, setIsLoadingContent] = useState(true);
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        const response = await client.get("/resources/projects");
-        setIsLoadingContent(false);
-        setProjectsData(response.data);
-      } catch (error) {
-        console.log(error);
-      }
-    }
-    fetchData();
-  }, []);
+  const [projectsData, setProjectsData] = useState(projectDataStatic);
+  const [isLoadingContent, setIsLoadingContent] = useState(false);
+  // useEffect(() => {
+  //   async function fetchData() {
+  //     try {
+  //       const response = await client.get("/resources/projects");
+  //       setIsLoadingContent(false);
+  //       console.log(response.data);
+  //     } catch (error) {
+  //       console.log(error);
+  //     }
+  //   }
+  //   fetchData();
+  // }, []);
+  // console.log(projectsData);
 
   return (
     <section id="projects">
@@ -69,8 +71,8 @@ const Project = () => {
               gap={2}
             >
               {isLoadingContent && <MyLoader />}
-              {projectsData?.map((project) => (
-                <SingleProjectCard key={project._id} project={project} />
+              {projectsData?.map((project, ind) => (
+                <SingleProjectCard key={ind} project={project} />
               ))}
             </Stack>
           </Box>

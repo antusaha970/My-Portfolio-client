@@ -40,11 +40,19 @@ const ProjectLink = styled("a")`
   font-family: "Poppins";
   color: #ffffff;
   text-decoration: underline;
+  margin-right: 3px;
 `;
 
 const SingleProjectCard = ({ project }) => {
-  const { title, description, techStack, liveLink, githubLink, imageLink } =
-    project;
+  const {
+    title,
+    description,
+    techStack,
+    liveLink,
+    backendLink,
+    frontendLink,
+    imageLink,
+  } = project;
   return (
     <Card
       sx={{
@@ -81,7 +89,7 @@ const SingleProjectCard = ({ project }) => {
           >
             <Link sx={{ color: "#fff", pr: 1 }} />
             <ProjectLink href={`${liveLink}`} target=" ">
-              Live Preview
+              Live
             </ProjectLink>
           </Box>
           <Box
@@ -91,8 +99,12 @@ const SingleProjectCard = ({ project }) => {
             }}
           >
             <GitHub sx={{ color: "#fff", pr: 1 }} />
-            <ProjectLink href={`${githubLink}`} target=" ">
-              View Github
+            <ProjectLink href={`${frontendLink}`} target=" ">
+              Frontend
+            </ProjectLink>
+            <GitHub sx={{ color: "#fff", pr: 1 }} />
+            <ProjectLink href={`${backendLink}`} target=" ">
+              Backend
             </ProjectLink>
           </Box>
         </Stack>
@@ -107,7 +119,8 @@ SingleProjectCard.propTypes = {
     description: PropTypes.string.isRequired,
     techStack: PropTypes.string.isRequired,
     liveLink: PropTypes.string.isRequired,
-    githubLink: PropTypes.string.isRequired,
+    backendLink: PropTypes.string.isRequired,
+    frontendLink: PropTypes.string.isRequired,
     imageLink: PropTypes.string.isRequired,
   }).isRequired,
 };
