@@ -82,6 +82,16 @@ const projectDataStatic = [
   },
   {
     description:
+      "This Library Management System is a web-based application designed to streamline the process of managing books and user interactions within a library. The system allows users to explore a collection of books, borrow and return them, and share their reviews. It's made with Django MVT.",
+    backendLink: "https://github.com/antusaha970/e-library-django",
+    frontendLink: "https://github.com/antusaha970/e-library-django",
+    imageLink: "https://i.ibb.co.com/17McxC2/Screenshot-2024-10-17-133816.png",
+    liveLink: "https://e-library-django.onrender.com/",
+    techStack: "Python, Django, SQLite3, HTML/CSS, Bootstrap",
+    title: "E-library",
+  },
+  {
+    description:
       "This is a full stack Gym management project with full functionality. There is an admin panel also to manage content. I implemented stripe payment gateway too. For full information visit github. ",
     backendLink: "https://github.com/antusaha970/power-x-gym",
     frontendLink: "https://github.com/antusaha970/power-x-gym",
