@@ -18,6 +18,7 @@ import rest_framework from "../assets/techStack/rest.png";
 import stripe from "../assets/techStack/rsz_stripe.png";
 import postman from "../assets/techStack/postman.png";
 import mysql from "../assets/techStack/mysql.png";
+import redis from "../assets/techStack/redis.png";
 
 const techStackData = [
   { name: "css", img: css },
@@ -37,6 +38,7 @@ const techStackData = [
   { name: "stripe", img: stripe },
   { name: "postman", img: postman },
   { name: "mysql", img: mysql },
+  { name: "redis", img: redis },
 ];
 
 const problemSolvingProfileData = [
