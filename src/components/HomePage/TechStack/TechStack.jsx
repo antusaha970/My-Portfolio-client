@@ -11,7 +11,7 @@ export const TechStackTitle = styled(Typography)`
   color: #cccccc;
 `;
 
-const TechStackSubTitle = styled(Typography)`
+export const TechStackSubTitle = styled(Typography)`
   font-family: "Poppins";
   font-style: normal;
   font-weight: 400;

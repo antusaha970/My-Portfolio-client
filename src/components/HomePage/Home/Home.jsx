@@ -6,11 +6,13 @@ import {
   Footer,
   ProblemSolvingProfile,
 } from "../../Index/Index";
+import Education from "../Education/Education";
 const Home = () => {
   return (
     <Container maxWidth="lg">
       <Header />
       <TechStack />
+      <Education />
       <ProblemSolvingProfile />
       <Project />
       <Footer />
